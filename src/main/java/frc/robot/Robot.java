@@ -12,7 +12,7 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import com.ctre.phoenix.motorcontrol.can.*;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 
-public class Robot extends TimedRobot{
+public class Robot extends TimedRobot {
 
     /* initialize the joystick */
     private Joystick m_joystick;
@@ -20,6 +20,10 @@ public class Robot extends TimedRobot{
     /* initialize every talon */
     public TalonSRX drivetrainLeft;
     public TalonSRX drivetrainRight;
+    
+    private static final enum Controls {
+	A=1, B, X, Y, LB, RB, BACK, START, LEFT_JOYSTICK_PRESSED, RIGHT_JOYSTICK_PRESSED
+    };
 
     /**
      * This function is run when the robot is first started up and should be
