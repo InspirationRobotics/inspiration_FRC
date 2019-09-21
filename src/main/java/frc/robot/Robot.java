@@ -75,13 +75,13 @@ public class Robot extends TimedRobot {
 	/* turn on the flywheels */
 	if (joystick.getRawButton(8)) {
 	    temp = flywheelspeed;
-	    flywheelOne.set(ControlMode.PercentOutput, flywheelspeed);
-	    flywheelTwo.set(ControlMode.PercentOutput, flywheelspeed);   
+	    flywheelOne.set(ControlMode.PercentOutput, -1*(flywheelspeed));
+	    flywheelTwo.set(ControlMode.PercentOutput, -1*(flywheelspeed));   
 	}
 	
 	if (temp != flywheelspeed) {
-	    flywheelOne.set(ControlMode.PercentOutput, flywheelspeed);
-	    flywheelTwo.set(ControlMode.PercentOutput, flywheelspeed);
+	    flywheelOne.set(ControlMode.PercentOutput, -1*(flywheelspeed));
+	    flywheelTwo.set(ControlMode.PercentOutput, -1*(flywheelspeed));
 	    temp = flywheelspeed;
 	}
 	
